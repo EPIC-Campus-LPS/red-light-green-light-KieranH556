@@ -1,0 +1,8 @@
+How does the HC-SR04 sensor calculate distance?
+- They emitan ultrasonic pulse and measures the difference between the time it takes for the pulse to return after detecting a object.
+Why is it important to clean up GPIO pins with GPIO.cleanup() at the end of the program?
+- It keeps the Pi safe and prevents short circuits, accidental damage, and avoids error in future running of programs
+How did you calculate whether the object was moving ≥ 1 cm/second?
+- Calculated the distance between the previous distance measured and the "current" distance. If the difference had an absolute value greater than or equal to one the green light would turn on and the red light would turn off, otherwise the red light would stay on.
+If your sensor gives you a series of distance readings over time, how can you calculate speed?
+- You can use the formula for Speed (Speed = Distance/Time) by taking two readings that happened right after each other and their corresp0onding times to find the average rate of change between those speeds.
